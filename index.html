@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatCalc - Mean, Median, Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4A90E2">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>StatCalc</h1>
+            <div class="mode-toggle">
+                <button id="discreteMode" class="active">Discrete</button>
+                <button id="groupedMode">Grouped</button>
+            </div>
+        </header>
+
+        <main>
+            <section id="input-section">
+                <table id="data-table">
+                    <thead>
+                        <tr id="table-header">
+                            <th>x (Value)</th>
+                            <th>f (Frequency)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows will be added here -->
+                    </tbody>
+                </table>
+                <div class="controls">
+                    <button id="addRowBtn" class="secondary">Add Row</button>
+                    <button id="calculateBtn" class="primary">Calculate</button>
+                    <button id="clearBtn" class="danger">Clear</button>
+                </div>
+            </section>
+
+            <section id="results-section" class="hidden">
+                <h2>Results</h2>
+                <div id="summary-results"></div>
+                <div id="steps-container">
+                    <h3>Step-by-Step Calculation</h3>
+                    <div id="steps-content"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
